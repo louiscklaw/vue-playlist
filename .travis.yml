@@ -3,29 +3,36 @@
 # https://docs.travis-ci.com/user/job-lifecycle/
 
 # You can import up to 25 other configs in total.
-os: linux
+
+dist: bionic
 
 language: node_js
-
 node_js:
   - 10
-
-cache:
-  - npm
-  - pip
-
-script:
-  - echo "helloworld"
+cache: yarn
 
 stages:
-  - Unit_test
-  - Test
-  - Build
-  - Deploy
-  - Integration_to_other_repo
-  - Publish_dashboard
-  - Merge
+  - name: Unit_test
+  - name: Test
+  - name: Build
+  - name: Deploy
+
+  - name: Integration_to_other_repo
+    if: branch = develop
+
+  - name: Publish_dashboard
+    if: branch = master
+
+  - name: Merge
+  - name: Cron
+
+install:
+  - yarn
+
+script:
+  - hostname
 
 import:
   - credentials.yml
   - .travis-merger.yml
+  - react-helloworld-tryout/.travis.yml

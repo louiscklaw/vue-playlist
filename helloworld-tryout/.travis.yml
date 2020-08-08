@@ -1,0 +1,10 @@
+
+jobs:
+  include:
+    - stage: Unit_test
+      name: test (helloworld-tryout)
+      script:
+        - cd helloworld-tryout
+        -   yarn
+        -   yarn build
+        - cd -
