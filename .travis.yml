@@ -35,4 +35,4 @@ script:
 import:
   - credentials.yml
   - .travis-merger.yml
-  - react-helloworld-tryout/.travis.yml
+  - helloworld-tryout/.travis.yml
