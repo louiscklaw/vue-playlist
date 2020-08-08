@@ -2,7 +2,7 @@
 jobs:
   include:
     - stage: Merge
-      name: run merge
+      name: merge (travis-merger.yml)
       if: branch != master
       script:
         -  sudo apt update
