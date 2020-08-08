@@ -9,19 +9,13 @@ language: node_js
 
 node_js:
   - 10
+
 cache:
   - npm
   - pip
 
 script:
   - echo "helloworld"
-
-jobs:
-  include:
-    - stage: Merge
-      script:
-        - wget https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/travis-build-merger/merge_if_success.sh
-        - bash merge_if_success.sh
 
 stages:
   - Unit_test
@@ -34,3 +28,4 @@ stages:
 
 import:
   - credentials.yml
+  - .travis-merger.yml
