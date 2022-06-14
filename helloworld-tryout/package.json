@@ -1,10 +1,12 @@
 {
-  "name": "helloworld",
+  "name": "vue-helloworld",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "gitUpdate": "git add . && git commit -m \"update vue-helloworld,\" && git pull && git push",
+    "dev": "yarn --dev && yarn serve",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
