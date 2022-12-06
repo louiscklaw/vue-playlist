@@ -6,7 +6,8 @@
     "build": "vite build",
     "preview": "vite preview --port 4173",
     "gitUpdate": "git add . && git commit -m \"update v3-helloworld,\" && git pull && git push",
-    "into_frontend": "docker compose exec -it frontend bash",
+    "into_webservice": "docker compose exec -it webservice bash",
+    "into_myreactapp": "docker compose exec -it myreactapp bash",
     "docker_rebuild": "docker compose up --build -d"
   },
   "dependencies": {
