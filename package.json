@@ -1,0 +1,15 @@
+{
+  "name": "vue-playlist",
+  "version": "0.0.0",
+  "scripts": {
+    "gitUpdate": "git add . && git commit -m \"update vue-playlist,\" && git pull && git push"
+  },
+  "dependencies": {
+    "vue": "^3.2.36"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
+    "@vitejs/plugin-vue-jsx": "^1.3.10",
+    "vite": "^2.9.9"
+  }
+}
