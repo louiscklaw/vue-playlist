@@ -1,0 +1,48 @@
+version: "3.1"
+
+services:
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 127.0.0.1:27017:27017
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 127.0.0.1:8081:8081
+
+  webservice:
+    image: node:14-buster
+    # user: 1000:1000
+    volumes:
+      - ./webservice:/app
+      - webservice_node_modules:/app/node_modules
+    working_dir: /app
+    ports:
+      - 127.0.0.1:3001:3001
+      - 127.0.0.1:9229:9229
+    environment:
+      # - NODE_OPTIONS=--inspect=0.0.0.0:9229
+      - HELLO=WORLD
+    command: sleep infinity
+
+  myreactapp:
+    image: node:14-buster
+    # user: 1000:1000
+    volumes:
+      - ./myreactapp:/app
+      - myreactapp_node_modules:/app/node_modules
+    working_dir: /app
+    ports:
+      - 127.0.0.1:3000:3000
+      # - 127.0.0.1:9229:9229
+    environment:
+      # - NODE_OPTIONS=--inspect=0.0.0.0:9229
+      - HELLO=WORLD
+    command: sleep infinity
+  
+volumes:
+  webservice_node_modules:
+  myreactapp_node_modules:
