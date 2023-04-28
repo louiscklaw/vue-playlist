@@ -5,13 +5,16 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prettier": "prettier -w . ",
+    "gitUpdate": "git add . && git commit -m \"update vue3-helloworld,\" && git pull && git push"
   },
   "dependencies": {
     "vue": "^3.2.47"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
+    "prettier": "^2.8.8",
     "vite": "^4.1.4"
   }
 }
