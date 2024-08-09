@@ -1,0 +1,54 @@
+{
+  "name": "psitransfer",
+  "version": "0.0.0",
+  "description": "Simple open source self-hosted file sharing solution",
+  "keywords": [
+    "share",
+    "upload",
+    "transfer",
+    "files",
+    "wetransfer"
+  ],
+  "repository": "psi-4ward/psitransfer",
+  "bugs": "https://github.com/psi-4ward/psitransfer/issues",
+  "main": "app.js",
+  "dependencies": {
+    "archiver": "^5.3.1",
+    "axios": "^0.27.2",
+    "common-streams": "^1.4.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.2.0",
+    "debug": "^4.3.4",
+    "express": "^4.18.2",
+    "fs-promise": "^2.0.3",
+    "http-errors": "^2.0.0",
+    "method-override": "^3.0.0",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2",
+    "tar-stream": "^2.2.0",
+    "to-object-reducer": "^1.0.1",
+    "uuid": "^9.0.1"
+  },
+  "bin": {
+    "psitransfer": "cli.js"
+  },
+  "devDependencies": {
+    "filecompare": "^1.0.4",
+    "nodemon": "^3.1.4",
+    "testcafe": "^1.18.6",
+    "testcafe-browser-provider-browserstack": "^1.13.2"
+  },
+  "scripts": {
+    "start": "NODE_ENV=production node app.js",
+    "dev": "NODE_ENV=dev DEBUG=psitransfer:* nodemon --ext \"js,mjs,cjs,json,pug\" -i app -i dist -i data app.js",
+    "debug": "node --inspect app.js"
+  },
+  "engines": {
+    "node": ">= 10",
+    "npm": ">= 3"
+  },
+  "author": "Christoph Wiechert <wio@psitrax.de>",
+  "contributors": [],
+  "license": "BSD-2-Clause"
+}

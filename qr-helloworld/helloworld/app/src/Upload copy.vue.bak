@@ -1,0 +1,254 @@
+<template lang="pug">
+  .upload-app#uploadApp
+
+
+
+    <div class="flex justify-center p-4">
+        <button id="button" data-modal-toggle="modal" data-modal-target="modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Show modal</button>
+    </div>
+
+
+
+    <button data-modal-target="default-modal" data-modal-toggle="default-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">      Toggle modal    </button>
+    <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative p-4 w-full max-w-2xl max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <!-- Modal header -->
+                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">                       中文字得唔得                    </h3>
+                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="default-modal">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="p-4 md:p-5 space-y-4">
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                        With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
+                    </p>
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                        The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
+                    </p>
+                </div>
+                <!-- Modal footer -->
+                <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                    <button data-modal-hide="default-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I accept</button>
+                    <button data-modal-hide="default-modal" type="button" class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Decline</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <label class="inline-flex items-center cursor-pointer">
+      <input type="checkbox" value="" class="sr-only peer">
+      <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+      <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Toggle me</span>
+    </label>
+
+
+    <button data-tooltip-target="tooltip-default" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default tooltip</button>
+
+    <div id="tooltip-default" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+        Tooltip content
+        <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
+
+
+    <button data-popover-target="popover-default" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default popover</button>
+
+    <div data-popover id="popover-default" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+        <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
+            <h3 class="font-semibold text-gray-900 dark:text-white">中文字得唔得</h3>
+        </div>
+        <div class="px-3 py-2">
+            <p>中文字得唔得??</p>
+        </div>
+        <div data-popper-arrow></div>
+    </div>
+
+    <div class="relative max-w-sm">
+      <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+        </svg>
+      </div>
+      <input datepicker id="default-datepicker" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
+    </div>
+
+    <div role="status">
+        <svg aria-hidden="true" class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+            <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+        </svg>
+        <span class="sr-only">Loading...</span>
+    </div>
+
+    button(class='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded') helloworld
+    a.btn.btn-sm.btn-info.btn-new-session(v-if='!showLogin', @click='newSession()', :title='$root.lang.newUpload')
+      icon.fa-fw(name="cloud-upload-alt")
+      span.hidden-xs  {{ $root.lang.newUpload }}
+    .alert.alert-danger(v-show="error")
+      strong
+        icon.fa-fw(name="exclamation-triangle")
+        |  {{ error }}
+    form.well.upload-uploadPassword(v-if='showLogin', @submit.prevent='setUploadPass()')
+      h3 {{ $root.lang.uploadPassword }}
+      .form-group
+        input.form-control(type='password', v-model='uploadPassword', autofocus)
+      p.text-danger(v-show='uploadPasswordWrong')
+        strong {{ $root.lang.accessDenied }}
+      |
+      button.uploadPass.btn.btn-primary(:disabled='uploadPassword.length<1', type="submit")
+        icon.fa-fw(name="key")
+        |  {{ $root.lang.login }}
+    div(v-else-if="$root.configFetched")
+      .well(v-show="state === 'uploaded'")
+        .pull-right.btn-group.upload-success-btns
+          a.btn.btn-primary(v-if="!disableQrCode", @click.prevent="showQrCode" href="#" :title="$root.lang.showQrCode")
+            icon.fa-fw(name="qrcode")
+            | QR-Code
+          a.btn.btn-primary(:href="mailLnk" :title="$root.lang.sendViaMail")
+            icon.fa-fw(name="envelope")
+            |  {{ $root.lang.email }}
+          clipboard.btn.btn-primary(:value='shareUrl' :title="$root.lang.copyToClipboard")
+        h3.text-success
+          icon.fa-fw(name="check")
+          |  {{ $root.lang.uploadCompleted }}
+        div.share-link
+          span.title {{ $root.lang.downloadLink }}:
+          |
+          a(:href='shareUrl') {{ shareUrl }}
+      .row.overall-process(v-show="state === 'uploading'")
+        .col-xs-12
+          icon.pull-left(name="spinner", scale="2", spin="", style="margin-right: 10px")
+          .progress
+            .progress-bar.progress-bar-success.progress-bar-striped.active(:style="{width: percentUploaded+'%'}")
+              span(v-show='percentUploaded>8') {{ percentUploaded }}%
+              span(v-show='percentUploaded>15' style="margin-left: 10px") ({{ humanFileSize(bytesUploaded) }} / {{ humanFileSize(bucketSize) }})
+      .row
+        .col-sm-7
+          files
+        .col-sm-5
+          settings
+          .text-right(v-show='showUploadBtn')
+            button#uploadBtn.btn.btn-lg.btn-success(@click="$store.dispatch('upload/upload')")
+              icon.fa-fw(name="upload")
+              |  {{ $root.lang.upload }}
+          .text-right(v-show="state === 'uploadError'")
+            button#uploadRetryBtn.btn.btn-lg.btn-success(@click="$store.dispatch('upload/upload')")
+              icon.fa-fw(name="upload")
+              |  {{ $root.lang.retry }}
+
+</template>
+
+<script type="text/babel">
+  import { Encoder, ErrorCorrectionLevel, QRByte } from "@nuintun/qrcode";
+  import { mapState, mapGetters } from 'vuex';
+
+  import Settings from './Upload/Settings.vue';
+  import Files from './Upload/Files.vue';
+  import Clipboard from './common/Clipboard.vue'
+  import 'vue-awesome/icons/cloud-upload-alt';
+  import 'vue-awesome/icons/upload';
+  import 'vue-awesome/icons/check';
+  import 'vue-awesome/icons/spinner';
+  import 'vue-awesome/icons/envelope';
+  import 'vue-awesome/icons/qrcode';
+  import 'vue-awesome/icons/exclamation-triangle';
+  import { humanFileSize } from "./Upload/store/upload";
+
+
+  export default {
+    name: 'Upload',
+    components: {
+      Settings,
+      Files,
+      Clipboard,
+    },
+
+    data() {
+      return {
+        uploadPassword: '',
+        uploadPasswordWrong: null,
+      }
+    },
+
+    computed: {
+      ...mapState(['state']),
+      ...mapState('config', ['uploadPassRequired', 'uploadPass', 'requireBucketPassword', 'disableQrCode']),
+      ...mapState('upload', ['sid', 'files', 'password']),
+      ...mapGetters(['error', 'disabled']),
+      ...mapGetters('upload', ['percentUploaded', 'shareUrl', 'bucketSize', 'bytesUploaded']),
+      mailLnk: function() {
+        return this.$store.state.config
+          && this.$store.state.config.mailTemplate
+          && this.$store.state.config.mailTemplate.replace('%%URL%%', this.shareUrl);
+      },
+      showLogin() {
+        return this.uploadPassRequired && this.uploadPasswordWrong !== false;
+      },
+      showUploadBtn() {
+        return this.files.length
+          && !this.disabled
+          && (this.requireBucketPassword && this.password || !this.requireBucketPassword)
+      }
+    },
+
+    watch: {
+      state: function(val) {
+        if (val === 'uploaded' || val === 'uploadError') {
+          const el = document.getElementById('uploadApp');
+          if (!el || !el.scrollIntoView) return;
+          el.scrollIntoView(true);
+        }
+      }
+    },
+
+    methods: {
+      newSession() {
+        if (!confirm(this.$root.lang.createNewUploadSession)) return;
+        document.location.reload();
+      },
+      async setUploadPass() {
+        try {
+          this.$store.commit('config/SET', {uploadPass: this.uploadPassword});
+          await this.$store.dispatch('config/fetch');
+          this.uploadPasswordWrong = false;
+        } catch(e) {
+          if(e.code === 'PWDREQ') {
+            this.uploadPassword = '';
+            this.uploadPasswordWrong = true;
+          } else {
+            console.error(e);
+          }
+        }
+      },
+      showQrCode() {
+        const qrcode = new Encoder();
+        qrcode.setEncodingHint(true);
+        qrcode.setErrorCorrectionLevel(ErrorCorrectionLevel.H);
+        qrcode.write(new QRByte(this.shareUrl));
+        qrcode.make();
+        const imgSrc = qrcode.toDataURL(7, 10);
+        const data = imgSrc.substr(imgSrc.indexOf(',') + 1);
+        const byteCharacters = atob(data);
+        const byteNumbers = new Array(byteCharacters.length);
+        for (let i = 0; i < byteCharacters.length; i++) {
+          byteNumbers[i] = byteCharacters.charCodeAt(i);
+        }
+        const byteArray = new Uint8Array(byteNumbers);
+        const file = new Blob([byteArray], { type: 'image/gif;base64' });
+        window.open(URL.createObjectURL(file));
+      },
+      humanFileSize
+    }
+
+  }
+</script>
+
+<style>
+
+</style>

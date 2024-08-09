@@ -1,0 +1,14 @@
+doctype html
+html(lang='en')
+  head
+    include partials/head
+    include partials/head_custom
+  body
+    #dropHelper
+    .container
+      #upload
+    include partials/footer
+    script(src='app/common.js')
+    script PSITRANSFER_UPLOAD_PATH = '#{uploadAppPath}';
+    script(src='app/upload.js')
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>

@@ -1,0 +1,46 @@
+{
+  "name": "psitransfer",
+  "description": "A Vue.js project",
+  "version": "0.0.0",
+  "author": "Christoph Wiechert <wio@psitrax.de>",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack serve",
+    "build": "cross-env NODE_ENV=production webpack",
+    "analyze": "cross-env ANALYZE=true npm run build"
+  },
+  "dependencies": {
+    "@nuintun/qrcode": "^3.3.0",
+    "crypto-js": "^4.2.0",
+    "drag-drop": "^7.2.0",
+    "flowbite": "^2.5.1",
+    "regenerator-runtime": "^0.13.9",
+    "tus-js-client": "^2.3.1",
+    "uuid": "^8.3.2",
+    "vue": "^2.6.14",
+    "vue-awesome": "^4.5.0",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "babel-loader": "^8.2.5",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.2.7",
+    "file-loader": "^6.2.0",
+    "nodemon": "^3.1.4",
+    "postcss": "^8.4.41",
+    "postcss-loader": "^8.1.1",
+    "postcss-preset-env": "^10.0.0",
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0",
+    "style-loader": "^4.0.0",
+    "tailwindcss": "^3.4.7",
+    "vue-loader": "^15.9.8",
+    "vue-template-compiler": "^2.6.14",
+    "webpack": "^5.72.1",
+    "webpack-bundle-analyzer": "^4.5.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0"
+  }
+}
